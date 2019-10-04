@@ -1,0 +1,31 @@
+
+*:81 {
+    on startup "npm start --prefix /assets/www-nodejs"
+    proxy / localhost:8082
+    gzip
+}
+
+*:80 {
+    root /assets/www-static
+    errors {
+        404 error-404.html
+    }
+    gzip
+    ext .html
+    expires {
+        match .html$ 1d
+        match .xml$ 1d
+        match .json$ 1d
+        match .js$ 1w
+        match .css$ 1w
+        match .png$ 1w
+        match .jpg$ 1w
+        match .gif$ 1w
+        match .svg$ 1w
+        match .ogg$ 1m
+        match .ttf$ 1m
+        match .otf$ 1m
+        match .woff$ 1m
+        match .eot$ 1m
+    }
+}
