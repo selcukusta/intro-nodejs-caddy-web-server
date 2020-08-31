@@ -1,4 +1,4 @@
-# Serving static and NodeJS application with Caddy
+# Serving static and NodeJS application with Caddy Server
 
 Caddy is the HTTP/2 web server with automatic HTTPS. For more details; [Caddy Offical Web Site](https://caddyserver.com/)
 
